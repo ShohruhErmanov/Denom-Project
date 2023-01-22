@@ -1,0 +1,63 @@
+@import url(/css/fonts.css);
+
+:root{
+  --primary-color: #b538a4;
+  --link-color: #fff;
+  --white: #fff;
+  --roboto: "Roboto";
+  --title-color: #fff;
+  --title-color2:  #212121;
+  --text-color:#3f3f3f;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+body{
+    font-family: var(--roboto);
+    font-size: 14px;
+}
+
+.btn{
+    width: 180px;
+    background: #fb8a05;
+    padding: 10px 30px;
+    color: var(--white);
+    border-radius: 0;
+}
+
+/* ====== Header Startimg =======*/
+header{
+      background: linear-gradient(to right, #693dab, #cd29a2);
+}
+.header__nav-list{
+      display: flex;
+      column-gap: 25px;
+}
+.header__list-link{
+      color: var(--link-color);
+      font-size: 16px;
+      font-weight: 300;
+
+}
+.header__list-link:hover{
+  color: var(--link-color);
+}
+    
+/* ====== Header End ======*/
+
+/* ====== Main Startimg =======*/
+
+/* ====== Main End ======*/
+
+/* ====== Footer Startimg =======*/
+
+/* ====== Footer End ======*/
+
