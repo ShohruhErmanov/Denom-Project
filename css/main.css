@@ -35,7 +35,9 @@ body{
 
 /* ====== Header Startimg =======*/
 header{
-      background: linear-gradient(to right, #693dab, #cd29a2);
+      /* background: linear-gradient(to right, #693dab, #cd29a2); */
+      background: url(../img/banner-bg.png) no-repeat center center / cover;
+      height: 550px;
 }
 .header__nav-list{
       display: flex;
@@ -49,6 +51,109 @@ header{
 }
 .header__list-link:hover{
   color: var(--link-color);
+}
+.header__menu{
+    width: 40px;
+    height: 1px;
+    background: var(--white);
+    position: relative;
+    padding: 2px 0;
+}
+.header__menu::before,
+.header__menu::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background: var(--white);
+}
+.header__menu::before{
+  top: -10px;
+}
+.header__menu::after{
+  top: 10px;
+}
+.header__menu:not(.collapsed)::before{
+    transform: rotate(45deg);
+    top: 0;
+}
+.header__menu:not(.collapsed)::after{
+  transform: rotate(-45deg);
+  top: 0;
+}
+.header__menu:not(.collapsed){
+  background: transparent;
+  border: unset;
+}
+.header__corousel{
+   display: flex !important;
+   justify-content: space-between !important;
+   
+}
+.header__corousel-title{
+  color: var(--white);
+  font-size: 70px;
+  font-weight: 700;
+}
+.header__corousel-cor{
+  padding: 100px;
+  
+}
+.header__corousel-text{
+  color: var(--white);
+  font-weight: 400;
+  font-size: 16px;
+  width: 550px;
+}
+.header__corousel-link{
+ width: 180px;
+ background: var(--white);
+ padding: 10px 30px;
+font-size: 18px;
+  text-align: center;
+  color: #3f3f3f;
+}
+.header__corousel-link:hover{
+   background: #fb8a05;
+   color: var(--white);
+   transition: .5s;
+}
+.header__corousel-button{
+  display: flex;
+  column-gap: 20px;
+}
+.header__corousel-btn2:hover{
+  color: var(--white);
+}
+/* .nav-item{
+  width: 100px;
+} */
+.header__list-link::after{
+  content: '';
+  display: block;
+  background: #fb8a05;
+  width: 0;
+  height: 2px;
+  transition: .5s;
+} 
+.header__list-link:hover:after{
+  width: 100%;
+}
+.header__corousel-slider{
+  display: flex;
+  column-gap: 20px;
+}
+.header__corousel-dot{
+  width: 15px !important;
+  height: 15px !important;
+  background: unset;
+  border: 2px solid var(--white) !important;
+  border-radius: 50%;
+  display: block;
+}
+.header__corousel-dot.active{
+   background: var(--white);
 }
     
 /* ====== Header End ======*/
